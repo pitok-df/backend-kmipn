@@ -54,7 +54,8 @@ export const getTeamMemberByUserID = async (req: Request, res: Response<Response
             round: teamMember.team.submission?.round || "pending",
             verified: teamMember.team.verified,
             teamMembers: teamMember.team.teamMembers.map((member) => ({
-                name: `${member.name} ${member.role === "leader" ? ' (Ketua)' : ''}`,
+                name: `${member.name}`,
+                role: member.role,
                 nim: member.nim,
                 email: member.email,
                 noWa: member.no_WA,
