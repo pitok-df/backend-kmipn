@@ -51,7 +51,6 @@ router.get("/check-team-compleate", authenticateJWT, checkDataCompleate, (req, r
     return res.json({ teamDataCompleate: false });
 });
 
-
 router.get('/categories', getAllCategory);
 router.post('/categories', authenticateJWT, updateCategoriValidator, createCategory);
 router.get('/categories-close', authenticateJWT, getAllCategoryClose);
