@@ -34,7 +34,8 @@ export const getDataTeamService = async () => {
         lectureNip: item.lecture.nip,
         verified: item.verified,
         teamMembers: item.teamMembers.map((member) => ({
-            name: member.name + (member.role === 'leader' ? " (ketua)" : ''),
+            name: member.name,
+            role: member.role,
             nim: member.nim,
             email: member.email,
             noWA: member.no_WA,
